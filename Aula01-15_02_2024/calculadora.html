@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body {
+            background-color: lightgreen;
+            font-family: sans-serif;
+            text-align: center;
+        }
+        h1 {
+            padding-top: 2.5em;
+            padding-bottom: 2.5em;
+        }
+        p {
+            font-family: sans-serif;
+            font-size: large;
+            border-radius: 5%;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Exibe operações entre dois números</h1>
+    <script>
+        var n1 = parseFloat(prompt('Digite o primeiro número.'))
+        var n2 = parseFloat(prompt('Digite o segundo número.'))
+
+        var soma = n1 + n2
+        var sub = n1 - n2
+        var mult = n1 * n2
+        var divi = n1 / n2
+
+        // MOSTRANDO NA TELA DO COMPUTADOR
+
+        document.writeln(`Primeiro número: ${n1} | Segundo número: ${n2}<br>
+        <br>
+        A soma dos valores é de ${soma}<br>
+        A subtração dos valores é de ${sub}<br>
+        A multiplicação dos valores é de ${mult}<br>
+        A divisão dos valores é de ${divi}`)
+
+        // MOSTRANDO NO CONSOLE E POR ALERTA
+        
+        // console.log('A adição dos números é de: ' + soma +
+        //     '\nA subtração dos números é de: ' + sub +
+        //     '\nA multiplicação dos números é de: ' + mult +
+        //     '\nA divisão dos números é de: ' + divi)
+
+        // alert('A adição dos números é de: ' + soma +
+        //     '\nA subtração dos números é de: ' + sub +
+        //     '\nA multiplicação dos números é de: ' + mult +
+        //     '\nA divisão dos números é de: ' + divi)
+    </script>
+</body>
+
+</html>
