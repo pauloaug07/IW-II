@@ -14,7 +14,7 @@ function estaQuebrada() {
 }
 
 function atualizarSituacaoLamp() {
-    situacao.innerHTML = `O estado da lâmpada é: ${situacaoLamp}`
+    situacao.innerHTML = `A lâmpada está: ${situacaoLamp}`
 }
 
 function lampLigada() {

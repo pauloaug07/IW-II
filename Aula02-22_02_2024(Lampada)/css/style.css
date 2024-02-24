@@ -13,12 +13,14 @@ main {
 button {
     width: 80px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 4%;
 }
 
 #ligadesliga {
     margin-top: 10%;
     margin-bottom: 10%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 4%;
 }
 
 #imagem {
