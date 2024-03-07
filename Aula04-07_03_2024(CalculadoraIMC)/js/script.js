@@ -8,45 +8,45 @@ var diag = document.getElementById('diag');
 
 function calcular(){
     var imc = parseFloat(peso.value) / parseFloat(altura.value) ** 2
-    console.log(imc)
-    resultado.innerHTML = (imc)
-    difsex()
+    console.log(imc);
+    resultado.innerHTML = (imc);
+    difsex(imc);
 }
 
-function difsex(){
+function difsex(imc){
     if (value == 'masc') {
-        calcmasc()
+        calcmasc(imc);
     } else {
-        calcfem()
+        calcfem(imc);
     }
 }
 
 function calcmasc(imc) {
     if (imc < 20.7) {
-        diag.innerHTML = ('Abaixo do peso')
-    } else if (20.7 < imc < 26.4) {
-        diag.innerHTML = ('Peso ideal')
-    } else if (26.5 < imc < 27.8) {
-        diag.innerHTML = ('Pouco acima do peso')
-    } else if (27.9 < imc < 31.1) {
-        diag.innerHTML = ('Acima do peso')
+        diag.innerHTML = ('Abaixo do peso');
+    } else if (imc >= 20.7 && imc < 26.4) {
+        diag.innerHTML = ('Peso ideal');
+    } else if (imc >= 26.5 && imc < 27.8) {
+        diag.innerHTML = ('Pouco acima do peso');
+    } else if (imc >= 27.9 && imc < 31.1) {
+        diag.innerHTML = ('Acima do peso');
     } else if (imc >= 31.2) {
-        diag.innerHTML = ('Obesidade')
+        diag.innerHTML = ('Obesidade');
     }
 
 }
 
 function calcfem(imc) {
     if (imc < 19.1) {
-        diag.innerHTML = ('Abaixo do peso')
-    } else if (19.1 < imc < 25.8) {
-        diag.innerHTML = ('Peso ideal')
-    } else if (25.9 < imc < 27.3) {
-        diag.innerHTML = ('Pouco acima do peso')
-    } else if (27.4 < imc < 32.3) {
-        diag.innerHTML = ('Acima do peso')
+        diag.innerHTML = ('Abaixo do peso');
+    } else if (imc >= 19.1 && imc < 25.8) {
+        diag.innerHTML = ('Peso ideal');
+    } else if (imc >= 25.9 && imc < 27.3) {
+        diag.innerHTML = ('Pouco acima do peso');
+    } else if (imc >= 27.4 && imc < 32.3) {
+        diag.innerHTML = ('Acima do peso');
     } else if (imc >= 32.4) {
-        diag.innerHTML = ('Obesidade')
+        diag.innerHTML = ('Obesidade');
     }
 }
 
