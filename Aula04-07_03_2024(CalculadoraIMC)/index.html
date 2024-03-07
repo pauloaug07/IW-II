@@ -9,35 +9,40 @@
 </head>
 
 <body>
-    <div id="pesod">
-        <label>Digite seu peso (em kg):</label>
-        <input type="number" id="peso" name="peso" value="">
-    </div>
-    <div id="alturad">
-        <label>Digite sua altura (em metros):</label>
-        <input type="number" id="altura" name="altura" value="">
-    </div>
-    <div id="sexod">
-        <label for="sexo">Selecione seu sexo:</label>
-        <select name="sexo" id="sexo">
-            <option value="fem" id="fem">Masculino</option>
-            <option value="masc" id="masc">Feminino</option>
-        </select>
-    </div>
-    <div>
-        <button onclick="calcular()">CALCULAR</button>
-    </div>
-    <div>
-        <h2>Resultados:</h2>
-        <p>Seu IMC é de: <span id="result" name="result"></span></p>
-    </div>
-    <div>
-        <h2>Diagnóstico:</h2>
-        <p>O diagnóstico é: <span id="diag" name="diag"></span></p>
-    </div>
-    <div>
-        <button onclick="novocalc()">NOVO CÁLCULO?</button>
-    </div>
+    <main>
+        <div id="pesod">
+            <label>Digite seu peso (em kg):</label>
+            <input type="number" id="peso" name="peso" value="">
+        </div>
+        <div id="alturad">
+            <label>Digite sua altura (em metros):</label>
+            <input type="number" id="altura" name="altura" value="">
+        </div>
+        <div id="sexod">
+            <label for="sexo">Selecione seu sexo:</label>
+            <select name="sexo" id="sexo">
+                <option value="fem" id="fem">Masculino</option>
+                <option value="masc" id="masc">Feminino</option>
+            </select>
+        </div>
+        <div>
+            <button onclick="calcular()">CALCULAR</button>
+        </div>
+        <div>
+            <h2>Resultados:</h2>
+            <p>Seu IMC é de: <span id="result" name="result"></span></p>
+        </div>
+        <div>
+            <h2>Diagnóstico:</h2>
+            <p>O diagnóstico é: <span id="diag" name="diag"></span></p>
+        </div>
+        <div>
+            <button onclick="novocalc()">NOVO CÁLCULO?</button>
+        </div>
+    </main>
+    <aside>
+        
+    </aside>
     <script src="js/script.js"></script>
 </body>
 

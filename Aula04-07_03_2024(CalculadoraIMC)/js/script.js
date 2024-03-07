@@ -7,7 +7,7 @@ var resultado = document.getElementById('result');
 var diag = document.getElementById('diag');
 
 function calcular(){
-    var imc = parseFloat(peso.value) / parseFloat(altura.value) ** 2
+    var imc = (parseFloat(peso.value) / parseFloat(altura.value) ** 2).toFixed(2)
     console.log(imc);
     resultado.innerHTML = (imc);
     difsex(imc);
@@ -33,7 +33,6 @@ function calcmasc(imc) {
     } else if (imc >= 31.2) {
         diag.innerHTML = ('Obesidade');
     }
-
 }
 
 function calcfem(imc) {
