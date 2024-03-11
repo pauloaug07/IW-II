@@ -9,40 +9,102 @@
 </head>
 
 <body>
-    <main>
-        <div id="pesod">
-            <label>Digite seu peso (em kg):</label>
-            <input type="number" id="peso" name="peso" value="">
+    <h1 style="text-align: center; margin-top: 5%;">CALCULADORA DE IMC</h1>
+    <div class="linha">
+        <div class="col-6" id="ptinicial">
+            <div id="pesod" class="mtd1">
+                <label>Digite seu peso (quilogramas):</label>
+                <input type="number" id="peso" name="peso" value="">
+            </div>
+            <div id="alturad" class="mtd1">
+                <label>Digite sua altura (metros):</label>
+                <input type="number" id="altura" name="altura" value="">
+            </div>
+            <div id="sexod" class="mtd1">
+                <label for="sexo">Selecione seu sexo:</label>
+                <select name="sexo" id="sexo">
+                    <option value="fem" id="fem">Masculino</option>
+                    <option value="masc" id="masc">Feminino</option>
+                </select>
+            </div>
+            <div class="mtd1">
+                <button onclick="calcular()">CALCULAR</button>
+            </div>
         </div>
-        <div id="alturad">
-            <label>Digite sua altura (em metros):</label>
-            <input type="number" id="altura" name="altura" value="">
+        <div class="col-6" id="ptfinal">
+            <div class="mtd2">
+                <h2>Resultados:</h2>
+                <p>Seu IMC é de: <span id="result" name="result"></span></p>
+            </div>
+            <div class="mtd2">
+                <h2>Diagnóstico:</h2>
+                <p>O diagnóstico é: <span id="diag" name="diag"></span></p>
+            </div>
+            <div class="mtd2">
+                <button onclick="novocalc()">NOVO CÁLCULO?</button>
+            </div>
         </div>
-        <div id="sexod">
-            <label for="sexo">Selecione seu sexo:</label>
-            <select name="sexo" id="sexo">
-                <option value="fem" id="fem">Masculino</option>
-                <option value="masc" id="masc">Feminino</option>
-            </select>
+    </div>
+    <div class="container">
+        <div id="tabelajs1" class="tabela-container">
+            <h2>Tabela de IMC Masculino</h2>
+            <table style="overflow-x: scroll;">
+                <tr>
+                    <th>IMC</th>
+                    <th>CATEGORIA</th>
+                </tr>
+                <tr id="linha1masc">
+                    <td>Abaixo de 20,7</td>
+                    <td>Abaixo do peso</td>
+                </tr>
+                <tr id="linha2masc">
+                    <td>20,7 a 26,4</td>
+                    <td>Peso ideal</td>
+                </tr>
+                <tr id="linha3masc">
+                    <td>26,5 a 27,8</td>
+                    <td>Pouco acima do peso</td>
+                </tr>
+                <tr id="linha4masc">
+                    <td>27,9 a 31,1</td>
+                    <td>Acima do peso</td>
+                </tr>
+                <tr id="linha5masc">
+                    <td>31,2 e acima</td>
+                    <td>Obesidade</td>
+                </tr>
+            </table>
         </div>
-        <div>
-            <button onclick="calcular()">CALCULAR</button>
+        <div id="tabelajs2" class="tabela-container">
+            <h2>Tabela de IMC Feminino</h2>
+            <table style="overflow-x: scroll;">
+                <tr>
+                    <th>IMC</th>
+                    <th>CATEGORIA</th>
+                </tr>
+                <tr id="abaixo2">
+                    <td>Abaixo de 19,1</td>
+                    <td>Abaixo do peso</td>
+                </tr>
+                <tr id="ideal2">
+                    <td>19,1 a 25,8</td>
+                    <td>Peso ideal</td>
+                </tr>
+                <tr id="pouco2">
+                    <td>25,9 a 27,3</td>
+                    <td>Pouco acima do peso</td>
+                </tr>
+                <tr id="acima2">
+                    <td>27,4 a 32,3</td>
+                    <td>Acima do peso</td>
+                </tr>
+                <tr id="obesidade2">
+                    <td>32,4 e acima</td>
+                    <td>Obesidade</td>
+                </tr>
+            </table>
         </div>
-        <div>
-            <h2>Resultados:</h2>
-            <p>Seu IMC é de: <span id="result" name="result"></span></p>
-        </div>
-        <div>
-            <h2>Diagnóstico:</h2>
-            <p>O diagnóstico é: <span id="diag" name="diag"></span></p>
-        </div>
-        <div>
-            <button onclick="novocalc()">NOVO CÁLCULO?</button>
-        </div>
-    </main>
-    <aside>
-        
-    </aside>
+    </div>
     <script src="js/script.js"></script>
 </body>
 
