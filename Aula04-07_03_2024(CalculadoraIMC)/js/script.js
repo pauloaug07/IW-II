@@ -4,12 +4,12 @@ var altura = document.getElementById('altura');
 var select = document.getElementById('sexo');
 var resultado = document.getElementById('result');
 var diag = document.getElementById('diag');
+var value = select.options[select.selectedIndex].value;
 
 function calcular() {
     var imc = (parseFloat(peso.value) / parseFloat(altura.value) ** 2).toFixed(2);
     console.log(imc);
     resultado.innerHTML = (imc);
-    value = select.options[select.selectedIndex].value; // Obter o valor selecionado atualizado
     difsex(imc);
 }
 
