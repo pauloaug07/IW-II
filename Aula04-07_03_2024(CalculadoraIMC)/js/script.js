@@ -4,16 +4,15 @@ var altura = document.getElementById('altura');
 var select = document.getElementById('sexo');
 var resultado = document.getElementById('result');
 var diag = document.getElementById('diag');
-var value = select.options[select.selectedIndex].value;
 
 function calcular() {
     var imc = (parseFloat(peso.value) / parseFloat(altura.value) ** 2).toFixed(2);
-    console.log(imc);
+    var value = select.options[select.selectedIndex].value;
     resultado.innerHTML = (imc);
-    difsex(imc);
+    difsex(imc, value);
 }
 
-function difsex(imc) {
+function difsex(imc, value) {
     if (value == 'masc') {
         calcmasc(imc);
     } else {
