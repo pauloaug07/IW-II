@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <h1>Reajuste salarial</h1>
+    <button onclick="reajustar()" id="botao">Reajustar salário</button>
+    <p id="text1">Clique no botão acima para iniciar.</p>
+    <h1 id="title1"></h1>
+    <p id="text2"></p>
+    <p id="text3"></p>
+    <p id="text4"></p>
+    <script>
+        var title1 = document.getElementById('title1')
+        var text1 = document.getElementById('text1')
+        var text2 = document.getElementById('text2')
+        var text3 = document.getElementById('text3')
+        var text4 = document.getElementById('text4')
+        
+        function reajustar() {
+            var nomeFunc = prompt('Digite o nome do funcionário')
+            var salarioAnt = parseFloat(prompt('Digite o salário de '+nomeFunc))
+            var porcentagem = parseFloat(promt('Digite a porcentagem de reajuste do salário de '+nomeFunc))
+
+            text1.innerHTML = ('')
+            title1.innerHTML = (nomeFunc+' recebeu um aumento salarial!')
+            text2.innerHTML = ('O salário atual era de R$ '+salarioAnt+'.')
+            text3.innerHTML = ('Com um aumento de '+porcentagem+'%, o salário vai aumentar R$ '+aumento+' no próximo mês.')
+            text4.innerHTML = ('')
+        }
+    </script>
+</body>

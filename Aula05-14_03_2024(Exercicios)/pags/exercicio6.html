@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <h1>Calculadora de troco</h1>
+    <button onclick="botaoComprar()" id="botao">Comprar Produto</button>
+    <p id="text1"></p>
+    <p id="text2"></p>
+    <p id="text3"></p>
+    <script>
+        var text1 = document.getElementById('text1')
+        var text2 = document.getElementById('text2')
+        var text3 = document.getElementById('text3')
+        
+        function botaoComprar() {
+            var produto = prompt('Informe o nome do produto')
+            var preco = parseFloat(prompt('Informe o preço do produto: (R$)'))
+            var valorRecebido = parseFloat(prompt('Informe o valor a ser recebido: (R$)'))
+            var troco = valorRecebido - preco
+
+            text1.innerHTML = ('Voce irá comprar '+produto+' por R$ '+preco)
+            text2.innerHTML = ('Você deu R$ '+valorRecebido)
+            text3.innerHTML = ('Você irá receber de troco R$ '+troco)
+        }
+    </script>
+</body>

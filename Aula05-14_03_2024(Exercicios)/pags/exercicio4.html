@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <h1>Interagindo com usuário</h1>
+    <p id="textCor">Texto que mudará de cor</p>
+    <button onclick="botao1()" id="botao1">Verde</button>
+    <button onclick="botao2()" id="botao2">Azul</button>
+    <button onclick="botao3()" id="botao3">Vermelho</button>
+    <p id="text"></p>
+    <script>
+        var text = document.getElementById('text')
+        var textCor = document.getElementById('textCor')
+        
+        function botao1() {
+            text.innerHTML = ('Você clicou no botão 01!')
+            textCor.style.color = "green"
+        }
+       
+        function botao2() {
+            text.innerHTML = ('Você clicou no botão 02!')
+            textCor.style.color = "blue"
+        }
+      
+        function botao3() {
+            text.innerHTML = ('Você clicou no botão 03!')
+            textCor.style.color = "red"
+        }
+    </script>
+</body>
+
+</html>
