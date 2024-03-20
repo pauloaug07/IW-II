@@ -18,16 +18,24 @@
         var text1 = document.getElementById('text1')
         var text2 = document.getElementById('text2')
         var text3 = document.getElementById('text3')
-        
+
         function botaoComprar() {
             var produto = prompt('Informe o nome do produto')
             var preco = parseFloat(prompt('Informe o preço do produto: (R$)'))
-            var valorRecebido = parseFloat(prompt('Informe o valor a ser recebido: (R$)'))
-            var troco = valorRecebido - preco
+            valorCompra(produto, preco)
+        }
 
-            text1.innerHTML = ('Voce irá comprar '+produto+' por R$ '+preco)
-            text2.innerHTML = ('Você deu R$ '+valorRecebido)
-            text3.innerHTML = ('Você irá receber de troco R$ '+troco)
+        function valorCompra(produto, preco) {
+            var valorRecebido = parseFloat(prompt('Informe o valor a ser recebido: (R$)'))
+            if (valorRecebido < preco) {
+                prompt('O dinheiro recebido não é suficiente. Clique em OK para poder reenserir o valor.')
+                valorCompra(produto, preco)
+            } else {
+                var troco = valorRecebido - preco
+                text1.innerHTML = ('Voce irá comprar ' + produto + ' por R$ ' + preco)
+                text2.innerHTML = ('Você deu R$ ' + valorRecebido)
+                text3.innerHTML = ('Você irá receber de troco R$ ' + troco)
+            }
         }
     </script>
 </body>

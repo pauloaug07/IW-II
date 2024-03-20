@@ -17,22 +17,25 @@
     <p id="text3"></p>
     <p id="text4"></p>
     <script>
-        var title1 = document.getElementById('title1')
-        var text1 = document.getElementById('text1')
-        var text2 = document.getElementById('text2')
-        var text3 = document.getElementById('text3')
-        var text4 = document.getElementById('text4')
+        var title1 = document.getElementById('title1');
+        var text1 = document.getElementById('text1');
+        var text2 = document.getElementById('text2');
+        var text3 = document.getElementById('text3');
+        var text4 = document.getElementById('text4');
         
         function reajustar() {
-            var nomeFunc = prompt('Digite o nome do funcionário')
-            var salarioAnt = parseFloat(prompt('Digite o salário de '+nomeFunc))
-            var porcentagem = parseFloat(promt('Digite a porcentagem de reajuste do salário de '+nomeFunc))
+            var nomeFunc = prompt('Digite o nome do funcionário');
+            var salarioAnt = parseFloat(prompt('Digite o salário de '+nomeFunc));
+            var porcentagem = parseFloat(prompt('Digite a porcentagem de reajuste do salário de '+nomeFunc));
 
-            text1.innerHTML = ('')
-            title1.innerHTML = (nomeFunc+' recebeu um aumento salarial!')
-            text2.innerHTML = ('O salário atual era de R$ '+salarioAnt+'.')
-            text3.innerHTML = ('Com um aumento de '+porcentagem+'%, o salário vai aumentar R$ '+aumento+' no próximo mês.')
-            text4.innerHTML = ('')
+            salarioAtual = (salarioAnt + salarioAnt * (porcentagem / 100)).toFixed(2);
+            aumento = (salarioAtual - salarioAnt).toFixed(2);
+
+            text1.innerHTML = ('');
+            title1.innerHTML = (nomeFunc+' recebeu um aumento salarial!');
+            text2.innerHTML = ('O salário atual era de R$ '+salarioAnt+'.');
+            text3.innerHTML = ('Com um aumento de '+porcentagem+'%, o salário vai aumentar R$ '+aumento+' no próximo mês.');
+            text4.innerHTML = ('E a partir daí, '+nomeFunc+' vai passar a ganhar R$ '+salarioAtual+'.');
         }
     </script>
 </body>

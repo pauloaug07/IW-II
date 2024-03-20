@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 8</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <h1>Resolvendo Bhaskara</h1>
+    <button onclick="calculo()">Calcular</button>
+    <h3 id="textResolv"></h3>
+    <p id="textInicio">Considerando uma equção no formato <b>a</b>x² + <b>b</b>x + <b>c</b> = 0, aperte  o botão acima
+        para calcular o valor de Δ</p>
+    <p id="textEqua"></p>
+    <p id="textCalc"></p>
+    <p id="textValor"></p>
+    <script>
+        var textResolv = document.getElementById('textResolv')
+        var textInicio = document.getElementById('textInicio')
+        var textEqua = document.getElementById('textEqua')
+        var textCalc = document.getElementById('textCalc')
+        var textValor = document.getElementById('textValor')
+
+        function calculo() {
+            valorA = parseFloat(prompt('Qual é valor de a?'))
+            valorB = parseFloat(prompt('Qual é valor de b?'))
+            valorC = parseFloat(prompt('Qual é valor de c?'))
+
+            delta = valorB ** 2 - 4 * valorA * valorC
+
+            textResolv.innerHTML = ('Resolvendo Bhaskara')
+            textInicio.innerHTML = ('')
+            textEqua.innerHTML = ('A equação atual é <strong>'+valorA+'x² + '+valorB+'x + '+valorC+' = 0</strong>')
+            textCalc.innerHTML = ('O cálculo realizado será <strong>Δ = '+valorB+'² - 4 . '+valorA+' . '+valorC+'</strong>')
+            textValor.innerHTML = ('O valor calculado foi <strong style="background-color: yellow;">Δ = '+delta+'</strong>')
+        }
+
+    </script>
+</body>
+
+</html>
