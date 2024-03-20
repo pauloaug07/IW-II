@@ -22,20 +22,28 @@
         var text2 = document.getElementById('text2');
         var text3 = document.getElementById('text3');
         var text4 = document.getElementById('text4');
-        
+
         function reajustar() {
             var nomeFunc = prompt('Digite o nome do funcionário');
-            var salarioAnt = parseFloat(prompt('Digite o salário de '+nomeFunc));
-            var porcentagem = parseFloat(prompt('Digite a porcentagem de reajuste do salário de '+nomeFunc));
+            var salarioAnt = parseFloat(prompt('Digite o salário de ' + nomeFunc));
+            var porcentagem = parseFloat(prompt('Digite a porcentagem de reajuste do salário de ' + nomeFunc));
 
             salarioAtual = (salarioAnt + salarioAnt * (porcentagem / 100)).toFixed(2);
-            aumento = (salarioAtual - salarioAnt).toFixed(2);
+            diferenca = (salarioAtual - salarioAnt).toFixed(2);
 
-            text1.innerHTML = ('');
-            title1.innerHTML = (nomeFunc+' recebeu um aumento salarial!');
-            text2.innerHTML = ('O salário atual era de R$ '+salarioAnt+'.');
-            text3.innerHTML = ('Com um aumento de '+porcentagem+'%, o salário vai aumentar R$ '+aumento+' no próximo mês.');
-            text4.innerHTML = ('E a partir daí, '+nomeFunc+' vai passar a ganhar R$ '+salarioAtual+'.');
+            if (porcentagem < 0) {
+                text1.innerHTML = ('');
+                title1.innerHTML = (nomeFunc + ' recebeu uma redução salarial.');
+                text2.innerHTML = ('O salário atual era de R$ ' + salarioAnt + '.');
+                text3.innerHTML = ('Com uma redução de ' + Math.abs(porcentagem) + '%, o salário vai abaixar R$ ' + Math.abs(diferenca) + ' no próximo mês.');
+                text4.innerHTML = ('E a partir daí, ' + nomeFunc + ' vai passar a ganhar R$ ' + salarioAtual + '.');
+            } else if (porcentagem > 0) {
+                text1.innerHTML = ('');
+                title1.innerHTML = (nomeFunc + ' recebeu um aumento salarial!');
+                text2.innerHTML = ('O salário atual era de R$ ' + salarioAnt + '.');
+                text3.innerHTML = ('Com um aumento de ' + porcentagem + '%, o salário vai aumentar R$ ' + diferenca + ' no próximo mês.');
+                text4.innerHTML = ('E a partir daí, ' + nomeFunc + ' vai passar a ganhar R$ ' + salarioAtual + '.');
+            }
         }
     </script>
 </body>
