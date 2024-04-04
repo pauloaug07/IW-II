@@ -107,7 +107,7 @@ function modoPink() {
     imagem.setAttribute('src', 'img/ipe.jpg');
     titulo.style.borderBottom = "4px solid blue";
     nomeimagem.innerHTML = "Modo rosa";
-    txtimg.innerHTML = "Imagem de um ipê";
+    txtimg.innerHTML = "Imagem de um ipê rosa";
 }
 
 /*
