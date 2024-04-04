@@ -4,14 +4,14 @@ let titulo = document.querySelector('h1')
 titulo.textContent = 'Aula 09 Manipular CSS'
 titulo.innerHTML = 'Manipular CSS'
 let imagem = document.querySelector('#foto')
-imagem.setAttribute('src', 'img/pride-fc.jpg')
+imagem.setAttribute('src', 'img/nuvens.jpeg')
 imagem.setAttribute('width', '280px')
 
 /* MANIPULAR CSS */
-document.querySelector('h1').style.color = "red";
-titulo.style.color = "red";
+document.querySelector('h1').style.color = "white";
+titulo.style.color = "white";
 titulo.style.backgroundColor = "#000";
-titulo.style.borderBottom = "2px solid red";
+titulo.style.borderBottom = "4px solid blue";
 titulo.style.padding = "0.625rem";
 titulo.style.borderRadius = "15px";
 
@@ -42,6 +42,8 @@ function modoDark() {
     tela.classList.remove("azul");
     tela.classList.remove("amarelo");
     tela.classList.remove("rosa");
+    imagem.setAttribute('src', 'img/esqueleto.jpeg');
+    titulo.style.borderBottom = "4px solid white";
 }
 
 function modoLight() {
@@ -52,6 +54,8 @@ function modoLight() {
     tela.classList.remove("azul");
     tela.classList.remove("amarelo");
     tela.classList.remove("rosa");
+    imagem.setAttribute('src', 'img/nuvens.jpeg');
+    titulo.style.borderBottom = "4px solid blue";
 }
 
 function modoBlue() {
@@ -62,6 +66,8 @@ function modoBlue() {
     tela.classList.remove("light");
     tela.classList.remove("amarelo");
     tela.classList.remove("rosa");
+    imagem.setAttribute('src', 'img/mar.jpeg');
+    titulo.style.borderBottom = "4px solid white";
 }
 
 function modoYellow() {
@@ -72,6 +78,8 @@ function modoYellow() {
     tela.classList.remove("azul");
     tela.classList.add("amarelo");
     tela.classList.remove("rosa");
+    imagem.setAttribute('src', 'img/abelha.jpg');
+    titulo.style.borderBottom = "4px solid blue";
 }
 
 function modoPink() {
@@ -82,6 +90,8 @@ function modoPink() {
     tela.classList.remove("azul");
     tela.classList.remove("amarelo");
     tela.classList.add("rosa");
+    imagem.setAttribute('src', 'img/ipe.jpg');
+    titulo.style.borderBottom = "4px solid blue";
 }
 
 /*
