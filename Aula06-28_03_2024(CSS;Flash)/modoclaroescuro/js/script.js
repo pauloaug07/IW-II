@@ -50,7 +50,7 @@ function modoDark() {
     tela.classList.remove("rosa");
     imagem.setAttribute('src', 'img/esqueleto.jpeg');
     titulo.style.borderBottom = "4px solid white";
-    nomeimagem.innerHTML = "Esqueleto";
+    nomeimagem.innerHTML = "Modo escuro";
     txtimg.innerHTML = "Imagem de um esqueleto";
 }
 
@@ -64,7 +64,7 @@ function modoLight() {
     tela.classList.remove("rosa");
     imagem.setAttribute('src', 'img/nuvens.jpeg');
     titulo.style.borderBottom = "4px solid blue";
-    nomeimagem.innerHTML = "Nuvens";
+    nomeimagem.innerHTML = "Modo claro";
     txtimg.innerHTML = "Imagem de nuvens";
 }
 
@@ -78,7 +78,7 @@ function modoBlue() {
     tela.classList.remove("rosa");
     imagem.setAttribute('src', 'img/mar.jpeg');
     titulo.style.borderBottom = "4px solid white";
-    nomeimagem.innerHTML = "Mar";
+    nomeimagem.innerHTML = "Modo azul";
     txtimg.innerHTML = "Imagem do mar";
 }
 
@@ -92,7 +92,7 @@ function modoYellow() {
     tela.classList.remove("rosa");
     imagem.setAttribute('src', 'img/abelha.jpg');
     titulo.style.borderBottom = "4px solid blue";
-    nomeimagem.innerHTML = "Abelha";
+    nomeimagem.innerHTML = "Modo amarelo";
     txtimg.innerHTML = "Imagem de uma abelha";
 }
 
@@ -106,7 +106,7 @@ function modoPink() {
     tela.classList.add("rosa");
     imagem.setAttribute('src', 'img/ipe.jpg');
     titulo.style.borderBottom = "4px solid blue";
-    nomeimagem.innerHTML = "Ipê";
+    nomeimagem.innerHTML = "Modo rosa";
     txtimg.innerHTML = "Imagem de um ipê";
 }
 
