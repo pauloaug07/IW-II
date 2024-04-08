@@ -12,7 +12,7 @@ body {
 }
 
 main {
-    min-width: 960px;
+    min-width: 90vw;
     min-height: 100vh;
     margin: 0 auto;
     background: #fff;
@@ -44,9 +44,9 @@ button {
     border-radius: 8px;
     padding: 0.625rem;
     cursor: pointer;
-    width: 100px;
+    width: auto;
     font-size: large;
-    margin: 1rem;
+    margin: 0.5rem;
 }
 
 /* botao light */
@@ -129,4 +129,11 @@ button {
 
 #tituloimg {
     margin-bottom: 2%;
+}
+
+@media screen and (max-width: 800px) {
+    /* Estilos para telas menores que 768px */
+    main {
+        min-width: 90%; /* ou outra largura adequada */
+    }
 }
