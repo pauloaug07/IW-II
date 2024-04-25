@@ -91,6 +91,9 @@
                     },
                     instagram: {
                         arrobaNoInicio: true
+                    },
+                    escolaridade: {
+                        required: true,
                     }
                 },
                 submitHandler: function (form) {
@@ -149,6 +152,15 @@
             <div class="row">
                 <label>CPF</label>
                 <input type="text" name="cpf" id="cpf" class="form-control">
+            </div>
+            <div class="row">
+                <label>Escolaridade</label>
+                <select name="escolaridade" id="escolaridade" class="form-control">
+                    <option value="">-----</option>
+                    <option value="FUNDAMENTAL">Fundamental</option>
+                    <option value="MEDIO">Médio</option>
+                    <option value="SUPERIOR">Superior</option>
+                </select>
             </div>
             <div class="row">
                 <label>Idade</label>
