@@ -4,11 +4,17 @@
     box-sizing: border-box;
 }
 
+*:not(.game-board, .clouds, .pipe, .mario, .score) {
+    background-image: url('../img/terra.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .game-board {
     width: 100%;
     height: 500px;
-    border-bottom: 50px solid #7e5b0a;
-    margin: 0 auto;
+    border-bottom: 50px solid green;
     position: relative;
     overflow: hidden;
     background: linear-gradient(#79b4cb, #e4eaec);
@@ -36,6 +42,14 @@
 
 .jump {
     animation: jump 500ms ease-out;
+}
+
+.score {
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 @keyframes cloud-animation {
