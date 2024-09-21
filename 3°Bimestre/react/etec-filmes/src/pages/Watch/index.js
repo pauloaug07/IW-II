@@ -3,8 +3,9 @@ import Container from "../../components/Container";
 import Footer from "../../components/Footer";
 import styles from "./Watch.module.css";
 import { useParams } from "react-router-dom";
-import videos from "../../json/videos.json"
-import PageNotFound from "../../pages/PageNotFound"
+import videos from "../../json/videos.json";
+import PageNotFound from "../../pages/PageNotFound";
+import ScrollToTopButton from "../../components/ScrollToTopButton";
 
 function Watch() {
     const params = useParams()
@@ -15,6 +16,7 @@ function Watch() {
     
     return (
         <>
+            <ScrollToTopButton />
             <Header />
             <Container>
                 <section className={styles.watch}>
